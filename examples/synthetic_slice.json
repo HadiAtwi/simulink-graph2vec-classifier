@@ -1,0 +1,24 @@
+{
+   "block1,1": [
+      {
+         "SID": "block1",
+         "BlockType": "Gain",
+         "SourceBlockSIDs": [],
+         "DestinationBlockSIDs": ["block2"],
+         "PropertyDict": {
+            "OutputSignals": "signal1",
+            "OutDataTypeStr": "int"
+         }
+      },
+      {
+         "SID": "block2",
+         "BlockType": "Integrator",
+         "SourceBlockSIDs": ["block1"],
+         "DestinationBlockSIDs": [],
+         "PropertyDict": {
+            "UpperLimit": 10,
+            "LowerLimit": -10
+         }
+      }
+   ]
+}
